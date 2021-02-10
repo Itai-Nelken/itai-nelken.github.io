@@ -1,7 +1,9 @@
-<h1>https://itai-nelken.github.io/my-repo/apt/</h1>
+<h1>https://itai-nelken.github.io/my-repo/</h1>
 <dl>
 <dt>Add this repository to /etc/apt/sources.list as:
- <dd><kbd>deb https://itai-nelken.github.io/my-repo/apt ./</kbd>
-<dt>Import verification key with:
+ <dd><kbd>deb [trusted=yes] https://itai-nelken.github.io/my-repo/   /</kbd>
+/*/
+ <dt>Import verification key with:
  <dd><kbd>wget -q https://itai-nelken.github.io/my-repo/apt/public.gpg -O- | sudo apt-key add -</kbd>
+  /*/
 </dl>
