@@ -1,11 +1,8 @@
 #!/bin/bash
 
-#check that script is being run as root
-if [ ! "$EUID" = 0 ]; then
-    echo "The script wasn't run as root!"
-    echo "you NEED to run this script as root!"
-    exit 1
-fi
+function error() {
+  echo -e "$(tput setaf 1)$(tput bold)$1$(tput sgr 0)"
+}
 
 # flags. default is to update with extra output and ask to exit.
 if [[ "$1" == "--version" ]] || [[ "$1" == "-v" ]]; then
@@ -26,6 +23,20 @@ elif [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
     --help or -h - print this help and exit.
   "
   exit 0
+fi
+
+#check that script is being run as root
+if [ ! "$EUID" = 0 ]; then
+    error "The script wasn't run as root!"
+    echo "$(tput bold)you NEED to run this script as root!$(tput sgr 0)"
+    exit 1
+fi
+
+#check if host system is ARM
+ARCH="`uname -m`"
+if [[ "$ARCH" != "armv7l" ]] && [[ "$ARCH" != "aarch64" ]]; then
+  error "ERROR: This script is only intended for arm devices!"
+  exit 1
 fi
 
 echo -e "$(tput setaf 6)adding repo...$(tput sgr 0)"
