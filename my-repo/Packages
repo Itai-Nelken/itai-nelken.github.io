@@ -59,16 +59,16 @@ Priority: optional
 Description: print CPU temperature of your pi.
 
 Package: qemu2deb
-Version: 0.3.1
+Version: 0.3.2
 Architecture: armhf
 Essential: no
 Maintainer: https://github.com/Itai-Nelken
-Installed-Size: 13048
-Filename: ./qemu2deb_0.3.1-armhf.deb
-Size: 4100
-MD5sum: d21317bc2d2eb0b2b043dc02ab37a324
-SHA1: 69b0fa3b4a15f80ec7862809648787a4d369cfe1
-SHA256: 7df8e1c855462e73c22c6a589ee2aed6c21d189aacfc3476786592ba3a8fe608
+Installed-Size: 13700
+Filename: ./qemu2deb_0.3.2_armhf.deb
+Size: 4392
+MD5sum: 1a753c37c625072f08992806958c4ba9
+SHA1: 4aa9a2384394ea5a7d54b616cd80adcdfd2df925
+SHA256: 9e391845f1c7f9b662cf52b0f403b1d9fba7cf4665669e5eb4d89d64d656f05b
 Section: custom
 Priority: optional
 Description: compiling/packaging/installing qemu made easier than ever on the RaspberryPi (armhf OS's only).
