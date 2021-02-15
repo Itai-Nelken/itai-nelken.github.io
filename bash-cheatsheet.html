@@ -413,7 +413,7 @@ echo &quot;DONE!&quot;</code></pre></div>
 
 <p><strong>NOTES:</strong><br>- change <code>PACKAGE</code> with real package name.<br>- change <code>sudo apt install -y PACKAGE</code> with any commands needed to install the package.</p>
 
-<div><pre><code class="language-bash">if ! which PACKAGE &gt; /dev/null; then
+<div><pre><code class="language-bash">if ! command -v PACKAGE &gt; /dev/null; then
    sudo apt install -y PACKAGE
 else
     echo &quot;PACKAGE already installed...&quot;
