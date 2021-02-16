@@ -1,13 +1,13 @@
 Origin: My_Repo
 Label: My_Repo
 Codename: buster
-Architectures: armhf
+Architectures: all
 Components: main
 Description: My APT repository
-Date: Tue, 16 Feb 2021 08:18:22 +0000
+Date: Tue, 16 Feb 2021 11:23:22 +0000
 MD5Sum:
- 5f4ad0e6f7a010b978344235360ba61b              950 Packages.gz
- 5e11a47ca475dfe1ea46bc664c9034a1             2155 Packages
+ 2b5d89b580d383ae2b8a582af826e9e4             1147 Packages.gz
+ a648bd214eb5ae888acf72b0e0686a06             2673 Packages
 SHA256:
- ee9b9231043c1e35f7ecb41ec2a5ff510e05b22767e0a8a05894bbcb258b15be              950 Packages.gz
- 435bf4b3d189fbddcf14dc622b548feb2a4e68e2b28b2b4958641bd80eb0ff46             2155 Packages
+ 7105dc528e9323a79c2d2fc744dd8b0fd3a2848587932ee0c6d5b805b47be69f             1147 Packages.gz
+ 3a46905bb2fbaafb9602604663458e64d151ccff781e7fb135479896902e8246             2673 Packages

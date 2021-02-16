@@ -1,3 +1,21 @@
+Package: ask-name
+Version: 1.0
+Architecture: all
+Maintainer: Itai-Nelken - https://github.com/Itai-Nelken/
+Provides: ask-name
+Filename: ./ask-name_1.0_all.deb
+Size: 1188
+MD5sum: 26c235eb0edac32e13a8ba5e9d80821f
+SHA1: b6a0b3c7ad73d7d22c35b154816cb1c2dcf40c00
+SHA256: 12f2db9a65f6e07b8ba7f2610124e96a4b4cf81286bd5de966a8a8bbe86c4a34
+Section: custom
+Priority: optional
+Description: ask your name and print it nicely formatted.
+License: GPL
+Name: ask-name
+Release: 1
+Summary: ask your name and print it nicely formatted.
+
 Package: count100
 Version: 1:1.1
 Architecture: armhf
