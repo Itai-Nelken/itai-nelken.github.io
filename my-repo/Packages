@@ -1,13 +1,13 @@
 Package: ask-name
-Version: 1.0
+Version: 2.0
 Architecture: all
 Maintainer: Itai-Nelken - https://github.com/Itai-Nelken/
 Provides: ask-name
-Filename: ./ask-name_1.0_all.deb
-Size: 1188
-MD5sum: 26c235eb0edac32e13a8ba5e9d80821f
-SHA1: b6a0b3c7ad73d7d22c35b154816cb1c2dcf40c00
-SHA256: 12f2db9a65f6e07b8ba7f2610124e96a4b4cf81286bd5de966a8a8bbe86c4a34
+Filename: ./ask-name_2.0_all.deb
+Size: 1240
+MD5sum: bca477a58e3a0378dec1e0c9e175e1c0
+SHA1: 741e846f92adbf95eb31c5277a8d65780951eab6
+SHA256: 6527dd5d961f191107316b7e1be0484008838fc4745561656e7c1f4814eb4637
 Section: custom
 Priority: optional
 Description: ask your name and print it nicely formatted.
