@@ -1,7 +1,7 @@
 /*for all pages*/
 /*list of everything in this stylesheet:
 - code
-- navbar+change color on hover+right aligned link
+- navbar+change color on hover+right aligned link+left aligned link
 - header
 - body
 - center
@@ -37,6 +37,11 @@
 /* Right-aligned link for navbar */
 .navbar a.right {
     float: right;
+}
+
+/* Right-aligned link for navbar */
+.navbar a.left {
+    float: left;
 }
 
 /* Change navbar color on hover */

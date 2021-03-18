@@ -5,13 +5,8 @@
   <title>Itai's apt repo</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  
-  /* Right-aligned link */
-  .navbar a.left {
-    float: left;
-  }
-  </style>
+  <!--stylesheet-->
+  <link ref="stylesheet" href="../style.css" />
  </head>
  
  <body>
@@ -21,11 +16,11 @@
  
   <h1>https://itai-nelken.github.io/my-repo/</h1>
   <h4>To add this repo to your system, run:</h4>
-  <dd><kbd>wget -qO- https://itai-nelken.github.io/my-repo/add-repo.sh | sudo bash</kbd></dd>
+  <span class="code">wget -qO- https://itai-nelken.github.io/my-repo/add-repo.sh | sudo bash</span>
   <dl>
   <dt>Alternatively add this line to /etc/apt/sources.list:</dt>
-   <dd><kbd>deb [trusted=yes] https://itai-nelken.github.io/my-repo/   /</kbd></dd>
-   <dt>Remember to run <dd><kbd>sudo apt update</kbd></dd> after doing that.</dt>
+   <span class="code">deb [trusted=yes] https://itai-nelken.github.io/my-repo/   /</span>
+   <dt>Remember to run <span class="code">sudo apt update</span> after doing that.</dt>
   </dl>
   
   <h3>List of packages</h3>
