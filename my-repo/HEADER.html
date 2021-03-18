@@ -8,7 +8,20 @@
   <!--stylesheet-->
   <link rel="stylesheet" href="../style.css" />
   <style>
-
+  /*code*/
+  .code {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #f4f6f9;
+    font-size: 13px;
+    opacity: .9;
+    width: auto;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+    line-height: 1.5em;
+    /*box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);*/
+  }
   </style>
  </head>
  
@@ -21,9 +34,9 @@
   <h4>To add this repo to your system, run:</h4>
   <span class="code">wget -qO- https://itai-nelken.github.io/my-repo/add-repo.sh | sudo bash</span>
   <dl>
-  <dt>Alternatively add this line to /etc/apt/sources.list:</dt>
+  <p>Alternatively add this line to /etc/apt/sources.list:</p>
    <span class="code">deb [trusted=yes] https://itai-nelken.github.io/my-repo/   /</span>
-   <dt>Remember to run <span class="code">sudo apt update</span> after doing that.</dt>
+   <p>Remember to run <span class="code">sudo apt update</span> after doing that.</p>
   </dl>
   
   <h3>List of packages</h3>
