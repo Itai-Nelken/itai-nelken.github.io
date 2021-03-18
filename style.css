@@ -1,0 +1,52 @@
+/*for all pages*/
+
+/*code*/
+.code {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #f4f6f9;
+    font-size: 13px;
+    opacity: .9;
+    width: auto;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+    line-height: 1.5em;
+    /*box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);*/
+}
+  
+/*navigation bar*/
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    background-color: #7a8074;
+}
+
+/* Right-aligned link for navbar */
+.navbar a.right {
+    float: right;
+}
+
+/* Change navbar color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*header*/
+.header {
+    padding: 5px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/*body*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
