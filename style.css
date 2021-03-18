@@ -1,4 +1,12 @@
 /*for all pages*/
+/*list of everything in this stylesheet:
+- code
+- navbar+change color on hover+right aligned link
+- header
+- body
+- center
+*/
+
 
 /*code*/
 .code {
@@ -49,4 +57,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+}
+
+.center { 
+    display: block;
+    text-align: center;
+    margin: 0 auto; width: 800px; height: 440px
 }
