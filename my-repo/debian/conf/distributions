@@ -1,0 +1,8 @@
+Origin: Itais apt repo
+Label: apt repository
+Codename: buster
+Architectures: armhf arm64 i386 amd64
+Components: main
+Description: my random stuff
+SignWith: yes
+Pull: buster

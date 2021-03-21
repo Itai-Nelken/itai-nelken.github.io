@@ -1,0 +1,5 @@
+Component: main
+Origin: Itais apt repo
+Label: apt repository
+Architecture: amd64
+Description: my random stuff
