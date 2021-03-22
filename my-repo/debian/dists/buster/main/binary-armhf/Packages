@@ -16,6 +16,24 @@ License: GPL
 Architecture: all
 Provides:ask-name
 
+Package: ask-name-c
+Maintainer: Itai-Nelken - https://github.com/Itai-Nelken/
+Summary: ask your name and print it nicely formatted.
+Name: ask-name-c
+Priority: optional
+Section: custom
+Filename: pool/main/a/ask-name-c/ask-name-c_1.0_all.deb
+Size: 3232
+SHA256: 183e952e46406aa4acdc9475ab349a23fa0dbacf8397d85e555fafa302f286c6
+SHA1: 990f9b03c84549bafc622916775985b0ebb09673
+MD5sum: b9bc5f77382d12c94e1ccce22507b19b
+Description: ask your name and print it nicely formatted, written in C.
+Version: 1.0
+Release: 1 
+License: GPL 
+Architecture: all
+Provides:ask-name-c
+
 Package: count100
 Version: 1:1.1
 Architecture: armhf
@@ -60,6 +78,24 @@ SHA256: 0e52f23e17ecbbe92472e524fdb6a3a836b82ffd2757fc0db248dc806c890b20
 SHA1: 82574940093183820a9fb20937e82ddbeaafde68
 MD5sum: 9d81cd58e8588f4ac9615216e187d84b
 Description: Print 'Hello, World!' on the screen.
+
+Package: multiplication-table
+Maintainer: Itai-Nelken - https://github.com/Itai-Nelken/
+Summary: print the multiplication table nicely formatted.
+Name: multiplication-table
+Priority: optional
+Section: custom
+Filename: pool/main/m/multiplication-table/multiplication-table_1.0_armhf.deb
+Size: 2944
+SHA256: 8bff85e730eae9c9596a7eb51deee4891e1855323b9f8d8c6f370e8020533933
+SHA1: 34a6d4220bd29642afa71707ecfd98ad436a049c
+MD5sum: 2ed650e0cd2d3afb529b74e77189b4c4
+Description: print the multiplication table nicely formatted, now your teacher will let you play with the terminal while in math class! written in C.
+Version: 1.0
+Release: 1 
+License: MIT 
+Architecture: armhf
+Provides:multiplication-table
 
 Package: pi-temp
 Version: 1.0

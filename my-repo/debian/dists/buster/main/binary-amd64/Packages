@@ -16,6 +16,24 @@ License: GPL
 Architecture: all
 Provides:ask-name
 
+Package: ask-name-c
+Maintainer: Itai-Nelken - https://github.com/Itai-Nelken/
+Summary: ask your name and print it nicely formatted.
+Name: ask-name-c
+Priority: optional
+Section: custom
+Filename: pool/main/a/ask-name-c/ask-name-c_1.0_all.deb
+Size: 3232
+SHA256: 183e952e46406aa4acdc9475ab349a23fa0dbacf8397d85e555fafa302f286c6
+SHA1: 990f9b03c84549bafc622916775985b0ebb09673
+MD5sum: b9bc5f77382d12c94e1ccce22507b19b
+Description: ask your name and print it nicely formatted, written in C.
+Version: 1.0
+Release: 1 
+License: GPL 
+Architecture: all
+Provides:ask-name-c
+
 Package: cpu-clock
 Version: 1.0
 Architecture: all
@@ -30,6 +48,24 @@ SHA256: 42fd591f41cc5296ec30cdcc3cfdb971710d28462f41ff59d642e46560abfb82
 SHA1: 0b5f93bbb26c5097e65ae60249c21ad1953e75e4
 MD5sum: ba6e941ccf01396eabe73a5d40175a75
 Description: print cpu clock speed of your pi.
+
+Package: multiplication-table
+Maintainer: Itai-Nelken - https://github.com/Itai-Nelken/
+Summary: print the multiplication table nicely formatted.
+Name: multiplication-table
+Priority: optional
+Section: custom
+Filename: pool/main/m/multiplication-table/multiplication-table_1.0_amd64.deb
+Size: 3092
+SHA256: 3d1231389ba82bbd2030cf71ad72c490bb666675b874138517fc9593bc5b9967
+SHA1: f37669f1dff3f8d464d77a21bc4b36fb568e650f
+MD5sum: 4af5151886672affb437cfc636f75eeb
+Description: print the multiplication table nicely formatted, now your teacher will let you play with the terminal while in math class! written in C.
+Version: 1.0
+Release: 1 
+License: MIT 
+Architecture: amd64
+Provides:multiplication-table
 
 Package: pi-temp
 Version: 1.0
