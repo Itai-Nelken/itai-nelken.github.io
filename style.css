@@ -69,3 +69,12 @@
     text-align: center;
     margin: 0 auto; width: 800px; height: 440px
 }
+
+.shadowanimation {
+    /*padding: 0.9em 3em;*/
+    /*margin: 0 auto;*/
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
+    filter: /* Sharp drop shadow */ drop-shadow(0 0.08rem 0.1em rgba(0,0,0, 0.2)) /* Diffuse ambient shadow */ drop-shadow(0 0.1rem 0.9em rgba(0,0,0, 0.2));
+}
