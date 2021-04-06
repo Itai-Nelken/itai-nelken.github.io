@@ -16,3 +16,66 @@ License: GPL
 Architecture: all
 Provides:ask-name
 
+Package: cpu-clock
+Version: 1.0
+Architecture: all
+Essential: no
+Installed-Size: 235
+Maintainer: https://github.com/Itai-Nelken
+Priority: optional
+Section: custom
+Filename: pool/main/c/cpu-clock/cpu-clock_1.0_all.deb
+Size: 2478
+SHA256: 42fd591f41cc5296ec30cdcc3cfdb971710d28462f41ff59d642e46560abfb82
+SHA1: 0b5f93bbb26c5097e65ae60249c21ad1953e75e4
+MD5sum: ba6e941ccf01396eabe73a5d40175a75
+Description: print cpu clock speed of your pi.
+
+Package: multiplication-table
+Maintainer: Itai-Nelken - https://github.com/Itai-Nelken/
+Summary: print the multiplication table nicely formatted.
+Name: multiplication-table
+Priority: optional
+Section: custom
+Filename: pool/main/m/multiplication-table/multiplication-table_1.0_amd64.deb
+Size: 3092
+SHA256: 3d1231389ba82bbd2030cf71ad72c490bb666675b874138517fc9593bc5b9967
+SHA1: f37669f1dff3f8d464d77a21bc4b36fb568e650f
+MD5sum: 4af5151886672affb437cfc636f75eeb
+Description: print the multiplication table nicely formatted, now your teacher will let you play with the terminal while in math class! written in C.
+Version: 1.0
+Release: 1 
+License: MIT 
+Architecture: amd64
+Provides:multiplication-table
+
+Package: pi-temp
+Version: 1.0
+Architecture: all
+Essential: no
+Installed-Size: 233
+Maintainer: https://github.com/Itai-Nelken/
+Priority: optional
+Section: custom
+Filename: pool/main/p/pi-temp/pi-temp_1.0_all.deb
+Size: 2514
+SHA256: 007e6413b3f20bb684149491d1305be5e2db141b08e98395a254d3ecc3b0daeb
+SHA1: 7241e0dc273e8e8be4a0aeba15317b9a609a5cb7
+MD5sum: 0e965ec7b882bf951267c5c9797234a0
+Description: print CPU temperature of your pi.
+
+Package: qemu2deb
+Version: 0.6.0
+Architecture: all
+Essential: no
+Installed-Size: 71658
+Maintainer: Itai Nelken <https://github.com/Itai-Nelken/>
+Priority: optional
+Section: custom
+Filename: pool/main/q/qemu2deb/qemu2deb_0.6.0_all.deb
+Size: 20480
+SHA256: 3aba25abefc26905904d655903c27540ee69fa2380034460bdc1002da0c9fcb4
+SHA1: c745caf6ca424d6ffabfafd24a038e7cd6282693
+MD5sum: 3b15a992a2f8f6fd71ba9bb7cad52941
+Description: compiling/packaging/installing qemu made easier than ever.
+
