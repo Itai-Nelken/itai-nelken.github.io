@@ -22,14 +22,14 @@ Summary: ask your name and print it nicely formatted.
 Name: ask-name-c
 Priority: optional
 Section: custom
-Filename: pool/main/a/ask-name-c/ask-name-c_1.2_armhf.deb
-Size: 3276
-SHA256: 6d96193cbc4e2d4d5e31ad1afe1db1e73fcd2a1a3a0d9d694256fa6aacd1d61d
-SHA1: ed48278bb20ed0628473d1302c0bb55a546fc0e3
-MD5sum: fbb5586adc19e0bfcac4091c0a680e33
+Filename: pool/main/a/ask-name-c/ask-name-c_2.0_armhf.deb
+Size: 3348
+SHA256: 5fde8ead54cf67edc243678dbd5550bf3ec61ac3beab4588a474bde5dbeeb0f3
+SHA1: 21f593fbdc92fc0174b8e1073815d1f2e7f8377c
+MD5sum: 1705fd34110a35522f9ea3f70120d76c
 Description: ask your name and print it nicely formatted, written in C.
-Version: 1.2
-Release: 1 
+Version: 2.0
+Release: 2 
 License: MIT 
 Architecture: armhf
 Provides:ask-name-c

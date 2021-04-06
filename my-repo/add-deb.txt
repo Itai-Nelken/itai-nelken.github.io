@@ -1,0 +1,4 @@
+To add a deb:
+reprepro --ask-passphrase -Vb . includedeb <distribution> /path/to/deb
+for example:
+reprepro --ask-passphrase -Vb . includedeb buster ../package.deb
