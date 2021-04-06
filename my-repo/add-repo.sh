@@ -55,9 +55,9 @@ echo ' + sudo wget https://raw.githubusercontent.com/Itai-Nelken/itai-nelken.git
 sudo wget https://raw.githubusercontent.com/Itai-Nelken/itai-nelken.github.io/main/my-repo/itai-repo.list -O /etc/apt/sources.list.d/itai-repo.list || error "Failed to download 'discord-webapp.list'!"
 #add key
 echo -e "$(tput setaf 6)adding key...$(tput sgr 0)"
-echo ' + wget -qO- https://raw.githubusercontent.com/Itai-Nelken/electron-discord-webapp_debian-repo/main/KEY.gpg | sudo apt-key add -'
+echo ' + wget -qO- https://raw.githubusercontent.com/Itai-Nelken/itai-nelken.github.io/main/my-repo/KEY.gpg | sudo apt-key add -'
 #run apt update 
-wget -qO- https://raw.githubusercontent.com/Itai-Nelken/electron-discord-webapp_debian-repo/main/KEY.gpg | sudo apt-key add - || error "Failed to download and add key!"
+wget -qO- https://raw.githubusercontent.com/Itai-Nelken/itai-nelken.github.io/main/my-repo/KEY.gpg | sudo apt-key add - || error "Failed to download and add key!"
 echo -e "$(tput setaf 6)running apt update...$(tput sgr 0)"
 echo " + sudo apt update"
 sudo apt update || warning "Failed to run 'sudo apt update'! please run that"
