@@ -55,9 +55,9 @@ Maintainer: Itai Nelken <https://github.com/Itai-Nelken/>
 Priority: optional
 Section: custom
 Filename: pool/main/q/qemu2deb/qemu2deb_0.7.1_all.deb
-Size: 22248
-SHA256: bb790fa69057a3d5d71ab505c966c971746d77deb2be4b697e84cd3f9c8ec5f5
-SHA1: faaae9c3f97c1850ba40c5e80e53e3b63dee78b1
-MD5sum: 0d3fc9c1d106202fa5d80f81e5e81f76
+Size: 22264
+SHA256: 7cc6f89a96d057f951da794b9c2a86ed7d0f4ed3d8e3af976642da56a2c68951
+SHA1: 7bbc5373c052e5c0b740bb0f95caf098bcbd9daa
+MD5sum: e66be9404ee04d43fbccb4a90371625c
 Description: compiling/packaging/installing qemu made easier than ever.
 
