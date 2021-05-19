@@ -48,9 +48,21 @@ function update-repos() {
 }
 
 if [[ "$1" != "" ]]; then
-	case $1 in 
-		update)
-			update-repos
+	case $1 in
+		update*)
+			update=$(echo $1 | sed -e 's/^[^=]*=//g')
+			if [[ "$update" == "update" ]]; then
+				update-repos
+			else
+				if [[ -d "$update" ]]; then
+					echo -e "\e[1m$update\e[0m"
+					cd "$update"
+					git pull
+					cd "$DIR"
+				else
+					echo -e "\e[1;31mERROR:\e[0;31m There is no repo called '$update' locally!\e[0m"
+				fi
+			fi
 		;;
 		ignore*)
 			ignore=$(echo $1 | sed -e 's/^[^=]*=//g')
