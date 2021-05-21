@@ -11,7 +11,7 @@ function help() {
 	echo -e "\e[1mUSAGE:\e[0m ./manage.sh [command] [option/command]"
 	echo -e "\e[1mAVAILABLE OPTIONS:\e[0m"
 	echo -e "\e[1mupdate\e[0m - git pull all the repos in the current folder.\n    ignore repos by adding the '--ignore' flag followed by a list of the folder names of the repos to ignore."
-	echo -e "\e[1mpush-all\e[0m - git push all the repos in the current folder.\n    ignore repos by adding the '--ignore' flag followed by a list of the folder names of the repos to ignore."
+	echo -e "\e[1mpush\e[0m - git push all the repos in the current folder.\n    ignore repos by adding the '--ignore' flag followed by a list of the folder names of the repos to ignore."
 }
 
 
@@ -29,7 +29,7 @@ function get-repo-names() {
 
 if [[ "$1" != "" ]]; then
 	case $1 in 
-		update*)
+		update)
 			if [[ ! -z "$2" ]] && [[ "$2" != "--ignore" ]]; then
 				if [[ -d "$2" ]]; then
 					echo -e "\e[1m$2\e[0m"
@@ -57,7 +57,20 @@ if [[ "$1" != "" ]]; then
 				fi
 			done
 		;;
-		push-all)
+		push)
+			if [[ ! -z "$2" ]] && [[ "$2" != "--ignore" ]]; then
+				if [[ -d "$2" ]]; then
+					echo -e "\e[1m$2\e[0m"
+					cd "$2"
+					git push
+					pid=$(echo $?)
+					cd "$DIR"
+					exit $pid
+				else
+					echo -e "\e[1;31mERROR:\e[0;31m There is no repo called '$2' locally!\e[0m"
+					exit 1
+				fi
+			fi
 			if [[ "$2" == "--ignore" ]]; then
 				shift 2
 				ignore_list+=("$@")
@@ -76,7 +89,7 @@ if [[ "$1" != "" ]]; then
 			help
 		;;
 		*)
-			echo -e "\e[1;31mERROR: \e[0;31m invalid operation!\e[0m"
+			echo -e "\e[1;31mERROR: \e[0;31m invalid operation \"$1\"!\e[0m"
 		;;
 	esac
 else
