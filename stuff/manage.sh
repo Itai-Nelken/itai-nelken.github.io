@@ -8,39 +8,10 @@ ignore_list=('')
 repo_names=('')
 
 function help() {
-<<<<<<< HEAD
-	echo "USAGE: ./manage.sh [command] [option/command]"
-	echo "AVAILABLE OPTIONS:"
-	echo "update - git pull all the repos in the current folder."
-	echo "ignore='repo1 repo2' - ignore repositories when updating. requires a command after it, currently only 'update.'"
-	echo "--about - about information."
-}
-
-function about() {
-	echo "manage.sh - a script to manage multiple cloned git repos"
-	echo "Copyright (C) $(date +%Y)  Itai-Nelken"
-	echo "run this script with the about flag + the '--license' flag to show the license (GPLv3)"
-}
-
-function license() {
-	echo -e "\n\e[1mThis program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.\e[0m"
-=======
 	echo -e "\e[1mUSAGE:\e[0m ./manage.sh [command] [option/command]"
 	echo -e "\e[1mAVAILABLE OPTIONS:\e[0m"
 	echo -e "\e[1mupdate\e[0m - git pull all the repos in the current folder.\n    ignore repos by adding the '--ignore' flag followed by a list of the folder names of the repos to ignore."
 	echo -e "\e[1mpush\e[0m - git push all the repos in the current folder.\n    ignore repos by adding the '--ignore' flag followed by a list of the folder names of the repos to ignore."
->>>>>>> 01a9b0844c279feba81b6cd694ac48b797f6de48
 }
 
 
@@ -116,12 +87,6 @@ if [[ "$1" != "" ]]; then
 		;;
 		help|-h|--help)
 			help
-		;;
-		--about|--version|-v)
-			about
-			if [[ "$2" == "--license" ]]; then
-				license
-			fi
 		;;
 		*)
 			echo -e "\e[1;31mERROR: \e[0;31m invalid operation \"$1\"!\e[0m"
