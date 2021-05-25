@@ -1,10 +1,14 @@
 #!/bin/bash
 
+# current working directory
 DIR="$(pwd)"
-# repositoreies to ignore when 'git pull'ing
+# repositories to ignore when 'git pull'ing
 ignore_list=('')
+# list of all repo names in DIR
+repo_names=('')
 
 function help() {
+<<<<<<< HEAD
 	echo "USAGE: ./manage.sh [command] [option/command]"
 	echo "AVAILABLE OPTIONS:"
 	echo "update - git pull all the repos in the current folder."
@@ -31,48 +35,84 @@ function license() {
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.\e[0m"
+=======
+	echo -e "\e[1mUSAGE:\e[0m ./manage.sh [command] [option/command]"
+	echo -e "\e[1mAVAILABLE OPTIONS:\e[0m"
+	echo -e "\e[1mupdate\e[0m - git pull all the repos in the current folder.\n    ignore repos by adding the '--ignore' flag followed by a list of the folder names of the repos to ignore."
+	echo -e "\e[1mpush\e[0m - git push all the repos in the current folder.\n    ignore repos by adding the '--ignore' flag followed by a list of the folder names of the repos to ignore."
+>>>>>>> 01a9b0844c279feba81b6cd694ac48b797f6de48
 }
 
-function update-repos() {
+
+# get all repo names in DIR and store them in the repo_names array
+function get-repo-names() {
 	for repo in $DIR/*; do
-			reponame="$(basename "$repo")"
-			if [[ "$reponame" != "manage.sh" ]]; then
-				if [[ ! "${ignore_list[@]}" =~ "$reponame" ]]; then
-					cd "$reponame"
-					echo -e "\e[1m$reponame:\e[0m"
-					git pull
-					cd "$DIR"
-				fi
+		reponame="$(basename "$repo")"
+		if [[ "$reponame" != "manage.sh" ]]; then
+			if [[ ! "${ignore_list[@]}" =~ "$reponame" ]]; then
+				repo_names+=("$reponame")
 			fi
+		fi
 	done
 }
 
 if [[ "$1" != "" ]]; then
-	case $1 in
-		update*)
-			update=$(echo $1 | sed -e 's/^[^=]*=//g')
-			if [[ "$update" == "update" ]]; then
-				update-repos
-			else
-				if [[ -d "$update" ]]; then
-					echo -e "\e[1m$update\e[0m"
-					cd "$update"
+	case $1 in 
+		update)
+			if [[ ! -z "$2" ]] && [[ "$2" != "--ignore" ]]; then
+				if [[ -d "$2" ]]; then
+					echo -e "\e[1m$2\e[0m"
+					cd "$2"
 					git pull
+					pid=$(echo $?)
 					cd "$DIR"
+					exit $pid
 				else
-					echo -e "\e[1;31mERROR:\e[0;31m There is no repo called '$update' locally!\e[0m"
+					echo -e "\e[1;31mERROR:\e[0;31m There is no repo called '$2' locally!\e[0m"
+					exit 1
 				fi
 			fi
-		;;
-		ignore*)
-			ignore=$(echo $1 | sed -e 's/^[^=]*=//g')
-			ignore_list+=("$ignore")
-			echo -e "\e[1mignore list:\e[0m ${ignore_list[@]}\n--------"
-			if [[ "$2" == "update" ]]; then
-				update-repos
-			else
-				echo -e "\e[1;31mERROR: \e[0;31m no ooperation provided for ignore_list change!\e[0m"
+			if [[ "$2" == "--ignore" ]]; then
+				shift 2
+				ignore_list+=("$@")
 			fi
+			get-repo-names
+			for repo in ${repo_names[@]}; do
+				if [[ ! "${repo_names[@]}" =~ "${ignore_list[@]}" ]] || [[ "${ignore_list[@]}" == '' ]]; then
+					echo -e "\e[1m$repo\e[0m"
+					cd "$repo"
+					git pull
+					cd "$DIR"
+				fi
+			done
+		;;
+		push)
+			if [[ ! -z "$2" ]] && [[ "$2" != "--ignore" ]]; then
+				if [[ -d "$2" ]]; then
+					echo -e "\e[1m$2\e[0m"
+					cd "$2"
+					git push
+					pid=$(echo $?)
+					cd "$DIR"
+					exit $pid
+				else
+					echo -e "\e[1;31mERROR:\e[0;31m There is no repo called '$2' locally!\e[0m"
+					exit 1
+				fi
+			fi
+			if [[ "$2" == "--ignore" ]]; then
+				shift 2
+				ignore_list+=("$@")
+			fi
+			get-repo-names
+			for repo in ${repo_names[@]}; do
+				if [[ ! "${repo_names[@]}" =~ "${ignore_list[@]}" ]] || [[ "${ignore_list[@]}" == '' ]]; then
+					echo -e "\e[1m$repo\e[0m"
+					cd "$repo"
+					git push
+					cd "$DIR"
+				fi
+			done
 		;;
 		help|-h|--help)
 			help
@@ -84,7 +124,7 @@ if [[ "$1" != "" ]]; then
 			fi
 		;;
 		*)
-			echo -e "\e[1;31mERROR: \e[0;31m invalid operation!\e[0m"
+			echo -e "\e[1;31mERROR: \e[0;31m invalid operation \"$1\"!\e[0m"
 		;;
 	esac
 else
