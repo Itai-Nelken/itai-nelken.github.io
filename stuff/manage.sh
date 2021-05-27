@@ -29,8 +29,8 @@ function get-repo-names() {
 
 if [[ "$1" != "" ]]; then
 	case $1 in 
-		update)
-			if [[ ! -z "$2" ]] && [[ "$2" != "--ignore" ]]; then
+		update|pull)
+			if [[ ! -z "$2" ]] && [[ "$2" != "--ignore"* ]]; then
 				if [[ -d "$2" ]]; then
 					echo -e "\e[1m$2\e[0m"
 					cd "$2"
