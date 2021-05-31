@@ -79,7 +79,7 @@ if [[ "$1" != "" ]]; then
 			fi
 			get-repo-names
 			for repo in ${repo_names[@]}; do
-				if [[ ! "${repo_names[@]}" =~ "${ignore_list[@]}" ]] || [[ "${ignore_list[@]}" == '' ]]; then
+				if [[ ! "${repo}" =~ "${ignore_list[@]}" ]] || [[ "${ignore_list[@]}" == '' ]]; then
 					echo -e "\e[1m$repo\e[0m"
 					cd "$repo"
 					git push
