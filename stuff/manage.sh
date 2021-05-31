@@ -28,7 +28,7 @@ function get-repo-names() {
 }
 
 if [[ "$1" != "" ]]; then
-	case $1 in 
+	case $1 in
 		update|pull)
 			if [[ ! -z "$2" ]] && [[ "$2" != "--ignore"* ]]; then
 				if [[ -d "$2" ]]; then
@@ -49,11 +49,13 @@ if [[ "$1" != "" ]]; then
 			fi
 			get-repo-names
 			for repo in ${repo_names[@]}; do
-				if [[ ! "${repo_names[@]}" =~ "${ignore_list[@]}" ]] || [[ "${ignore_list[@]}" == '' ]]; then
-					echo -e "\e[1m$repo\e[0m"
-					cd "$repo"
-					git pull
-					cd "$DIR"
+				if [[ ! "${repo}" =~ "${ignore_list[@]}" ]] || [[ "${ignore_list[@]}" == '' ]]; then
+					if [[ -d "${repo}" ]]; then
+						echo -e "\e[1m$repo\e[0m"
+						cd "$repo"
+						git pull
+						cd "$DIR"
+					fi
 				fi
 			done
 		;;
