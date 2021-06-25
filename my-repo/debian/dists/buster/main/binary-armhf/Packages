@@ -53,15 +53,15 @@ Description: count to 100 and back.
 Package: counter
 Maintainer: Itai Nelken <itainelken@gmail.com>
 Architecture: armhf
-Version: 1.1-1
+Version: 2.0-1
 Provides: counter
 Priority: extra
 Section: checkinstall
-Filename: pool/main/c/counter/counter_1.1-1_armhf.deb
-Size: 8324
-SHA256: 903fd233c2b9765ab3d673fff891a02deb9946c90da26818b805f3b3e05adb75
-SHA1: ca1a2501c8c195b8d05d35ecad0112c00f7396d8
-MD5sum: b801b33189fa0cda68de2b8e7c13a1e5
+Filename: pool/main/c/counter/counter_2.0-1_armhf.deb
+Size: 10116
+SHA256: a0f30fed5bb13d3ae8a8c037a8736f083451f223d4747adb25df3859ce03142c
+SHA1: 1583aebd33a5a50fb061b575ee180ee29962de61
+MD5sum: c9a890d2ae9d7a2587024113fe91b696
 Description: A simple counter written in the C programming langauge using the GTK toolkit for the GUI.
 
 Package: cpu-clock
