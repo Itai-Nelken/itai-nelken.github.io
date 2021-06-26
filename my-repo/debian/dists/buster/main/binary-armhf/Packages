@@ -58,10 +58,10 @@ Provides: counter
 Priority: extra
 Section: checkinstall
 Filename: pool/main/c/counter/counter_3.0-1_armhf.deb
-Size: 12100
-SHA256: 8dc891628f02cfebe1ca3692e228675d4cb526d2569b5be04e93879375d2e73e
-SHA1: c1fe0484ddfabf0b1b81453ba601ea4d1b3f36f1
-MD5sum: 6cc43c52449853b1ebbc2b9af33a114b
+Size: 12076
+SHA256: 7838fa2b29a36675d56946fcd7b6ae54bdbf88183f1327d867fd23a0ce10407b
+SHA1: 57900c8953eb219cf7f0b7e7af2c77d361658701
+MD5sum: c7b5d46cf9f8c27fa76395ff9955adee
 Description: A simple counter written in the C programming langauge using the GTK toolkit for the GUI.
 
 Package: cpu-clock
