@@ -18,12 +18,6 @@ function help() {
 	echo -e "\e[1mpush\e[0m - git push all the repos in the current folder.\n    ignore repos by adding the '--ignore' flag followed by a list of the folder names of the repos to ignore."
 }
 
-function increment() {
-	result=$1
-	result=$((result+1))
-	return $result
-}
-
 # get all repo names in DIR and store them in the repo_names array
 function get-repo-names() {
 	for repo in $DIR/*; do
@@ -44,9 +38,9 @@ if [[ "$1" != "" ]]; then
 					echo -e "\e[1m$2\e[0m"
 					cd "$2"
 					git pull
-					pid=$(echo $?)
+					exit=$(echo $?)
 					cd "$DIR"
-					exit $pid
+					exit $exit
 				else
 					echo -e "\e[1;31mERROR:\e[0;31m There is no repo called '$2' locally!\e[0m"
 					exit 1
@@ -62,9 +56,21 @@ if [[ "$1" != "" ]]; then
 					echo -e "\e[1m$repo\e[0m"
 					cd "$repo"
 					git pull
+					if [[ $? != 0 ]]; then
+						errnum=$((errnum+1))
+						errors[$errnum]="$repo"
+					fi
 					cd "$DIR"
 				fi
 			done
+			if [[ $errnum != 0 ]]; then
+				echo -e "\e[1;31m$errnum errors happened in repositories:\e[0m"
+				i=1
+				for repo in ${errors[@]}; do
+					echo "$i) $repo"
+					i=$((i+1))
+				done
+			fi
 		;;
 		push)
 			if [[ ! -z "$2" ]] && [[ "$2" != "--ignore" ]]; then
@@ -97,12 +103,14 @@ if [[ "$1" != "" ]]; then
 					cd "$DIR"
 				fi
 			done
-			echo -e "\e[1;31m$errnum errors happened in repositories:\e[0m"
-			i=1
-			for repo in ${errors[@]}; do
-				echo "$i) $repo"
-				increment $i
-			done
+			if [[ $errnum != 0 ]]; then
+				echo -e "\e[1;31m$errnum errors happened in repositories:\e[0m"
+				i=1
+				for repo in ${errors[@]}; do
+					echo "$i) $repo"
+					i=$((i+1))
+				done
+			fi
 		;;
 		help|-h|--help)
 			help
